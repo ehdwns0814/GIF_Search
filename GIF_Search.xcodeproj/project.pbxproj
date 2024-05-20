@@ -12,6 +12,9 @@
 		0EF3EA0F2BF9D0EB000F3E06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF3EA0E2BF9D0EB000F3E06 /* ViewController.swift */; };
 		0EF3EA142BF9D0EC000F3E06 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EF3EA132BF9D0EC000F3E06 /* Assets.xcassets */; };
 		0EF3EA172BF9D0EC000F3E06 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EF3EA152BF9D0EC000F3E06 /* LaunchScreen.storyboard */; };
+		0EF3EA222BFB5D92000F3E06 /* ImageCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF3EA212BFB5D92000F3E06 /* ImageCollection.swift */; };
+		0EF3EA242BFB6174000F3E06 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF3EA232BFB6174000F3E06 /* User.swift */; };
+		0EF3EA262BFB6228000F3E06 /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF3EA252BFB6228000F3E06 /* Gif.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		0EF3EA162BF9D0EC000F3E06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EF3EA182BF9D0EC000F3E06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EF3EA1E2BF9FA7B000F3E06 /* Secrets.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Secrets.xcconfig; sourceTree = "<group>"; };
+		0EF3EA212BFB5D92000F3E06 /* ImageCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollection.swift; sourceTree = "<group>"; };
+		0EF3EA232BFB6174000F3E06 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0EF3EA252BFB6228000F3E06 /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +45,7 @@
 		0EF3E9FE2BF9D0EB000F3E06 = {
 			isa = PBXGroup;
 			children = (
+				0EF3EA1E2BF9FA7B000F3E06 /* Secrets.xcconfig */,
 				0EF3EA092BF9D0EB000F3E06 /* GIF_Search */,
 				0EF3EA082BF9D0EB000F3E06 /* Products */,
 			);
@@ -57,13 +64,24 @@
 			children = (
 				0EF3EA0A2BF9D0EB000F3E06 /* AppDelegate.swift */,
 				0EF3EA0C2BF9D0EB000F3E06 /* SceneDelegate.swift */,
+				0EF3EA202BFB5D5E000F3E06 /* Model */,
 				0EF3EA0E2BF9D0EB000F3E06 /* ViewController.swift */,
 				0EF3EA132BF9D0EC000F3E06 /* Assets.xcassets */,
 				0EF3EA152BF9D0EC000F3E06 /* LaunchScreen.storyboard */,
-				0EF3EA1E2BF9FA7B000F3E06 /* Secrets.xcconfig */,
 				0EF3EA182BF9D0EC000F3E06 /* Info.plist */,
 			);
 			path = GIF_Search;
+			sourceTree = "<group>";
+		};
+		0EF3EA202BFB5D5E000F3E06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0EF3EA212BFB5D92000F3E06 /* ImageCollection.swift */,
+				0EF3EA232BFB6174000F3E06 /* User.swift */,
+				0EF3EA252BFB6228000F3E06 /* Gif.swift */,
+			);
+			name = Model;
+			path = "New Group/Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +156,10 @@
 			files = (
 				0EF3EA0F2BF9D0EB000F3E06 /* ViewController.swift in Sources */,
 				0EF3EA0B2BF9D0EB000F3E06 /* AppDelegate.swift in Sources */,
+				0EF3EA262BFB6228000F3E06 /* Gif.swift in Sources */,
 				0EF3EA0D2BF9D0EB000F3E06 /* SceneDelegate.swift in Sources */,
+				0EF3EA242BFB6174000F3E06 /* User.swift in Sources */,
+				0EF3EA222BFB5D92000F3E06 /* ImageCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
