@@ -9,7 +9,7 @@ import Foundation
 
 struct Gif {
     let identifier: String
-    let user: User
+    let user: User?
     let imageCollection: ImageCollection
     let title: String
 }
