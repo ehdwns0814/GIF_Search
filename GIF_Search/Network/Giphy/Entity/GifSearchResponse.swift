@@ -47,16 +47,6 @@ struct Pagination: Decodable {
     }
 }
 
-struct ImageResponse: Decodable {
-    let original: OriginalImageResponse
-    let fixedWidth: FixedWidthImageResponse
-    
-    enum CodingKeys: String, CodingKey {
-        case original
-        case fixedWidth = "fixed_width"
-    }
-}
-
 struct UserResponse: Decodable {
     let avatarURL: String
     let bannerURL: String
@@ -70,6 +60,16 @@ struct UserResponse: Decodable {
         case profileURL = "profile_url"
         case username
         case displayName = "display_name"
+    }
+}
+
+struct ImageResponse: Decodable {
+    let original: OriginalImageResponse
+    let fixedWidth: FixedWidthImageResponse
+    
+    enum CodingKeys: String, CodingKey {
+        case original
+        case fixedWidth = "fixed_width"
     }
 }
 
