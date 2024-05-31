@@ -8,7 +8,7 @@
 import Foundation
 
 final class SearchViewModel {
-    typealias T = ImageInfoViewModel
+    typealias T = ImageObjectViewModel
     
     var gifURLStorage: Observable<[T]> = Observable([])
     
@@ -41,7 +41,7 @@ final class SearchViewModel {
                 case .success(let gifBundle):
                     self?.hasNextPage = gifBundle.hasNextPage
                     self?.currentOffset = gifBundle.offset + 10
-                    self?.gifURLStorage.value? += gifBundle.gifs.map { ImageInfoViewModel(image: $0) }
+                    self?.gifURLStorage.value? += gifBundle.gifs.map { ImageObjectViewModel(image: $0) }
                 case .failure(let error):
                     print(error)
             }
