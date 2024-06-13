@@ -9,6 +9,9 @@ import Foundation
 
 struct ImageCollection {
     let imageURL: String
+    let originalWidth: Double
+    let originalHeight: Double
+    let mp4URL: String
 }
 
 extension ImageCollection: Hashable { }

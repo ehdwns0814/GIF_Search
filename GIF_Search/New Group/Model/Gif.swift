@@ -12,6 +12,8 @@ struct Gif {
     let user: User?
     let imageCollection: ImageCollection
     let title: String
+    let type: MediaType
+    let source: String?
 }
 
 extension Gif: Hashable { }

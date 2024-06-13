@@ -9,9 +9,8 @@ import Foundation
 
 struct User {
     let name: String
+    let profileURL: String
     let displayName: String
-    let description: String
-    let avatarURL: String
 }
 
 extension User: Hashable { }
