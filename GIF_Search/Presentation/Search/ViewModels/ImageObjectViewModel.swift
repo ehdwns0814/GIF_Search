@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ImageObjectViewModel {
+struct ImageObjectViewModel: Hashable {
     var image: Gif
     var aspectRatio: Double
 }

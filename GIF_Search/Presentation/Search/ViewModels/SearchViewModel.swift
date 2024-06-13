@@ -32,6 +32,8 @@ final class SearchViewModel {
         self.searchQuery = text
     }
     
+    // MARK: - Private Method(s)
+    
     private func searchGif(type: MediaType, query: String, offset: Int = 0) {
         self.giphyService.searchGif(
             type: type,
@@ -47,4 +49,14 @@ final class SearchViewModel {
             }
         }
     }
+}
+
+// MARK: - Search Section/ Item
+
+enum SearchSection: Int {
+    case searchResult = 0
+}
+
+enum SearchItem: Hashable {
+    case image(ImageObjectViewModel)
 }
