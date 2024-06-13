@@ -8,34 +8,32 @@
 import UIKit
 
 final class SearchViewController: UIViewController {
-
-    var viewModel = SearchViewModel(giphyService: DefaultGiphyService(apiService: DefaultAPIProvider()))
+    
+    var viewModel: SearchViewModel?
     
     private lazy var searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         return searchController
     }()
     
+    private let containerView = UIView()
     private let searchOutcomeController = SearchOutcomeBoxViewController()
+    
+    
+    // MARK: - Override(s)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setSearchController()
         self.setConstraint()
         self.setBinding()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
     }
     
     // MARK: - Method(s)
-    
-    private func setConstraint() {
-        self.searchController.searchBar.translatesAutoresizingMaskIntoConstraints = false
-    }
     
     private func setSearchController() {
         self.searchController.searchBar.placeholder = "Search Gif"
@@ -47,28 +45,30 @@ final class SearchViewController: UIViewController {
     }
     
     private func setBinding() {
-        viewModel.gifURLStorage.bind { [weak self] _ in
-            guard let self = self else {
-                return
-            }
+        self.viewModel?.gifURLStorage.bind { [weak self] items in
             DispatchQueue.main.async {
-                 
+                guard let controller = self?.searchOutcomeController else {
+                    return
+                }
+
             }
         }
     }
     
+    private func setConstraint() {
+        self.view.addSubview(self.containerView)
+        self.searchController.searchBar.translatesAutoresizingMaskIntoConstraints = false
+    }
 }
 
 // MARK: - UISearchBar Delegate
 
 extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        guard let text = searchBar.text else {
-            return
-        }
+        
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        self.viewModel.searchedFor(text: searchText)
+        self.viewModel?.searchedFor(text: searchText)
     }
 }
