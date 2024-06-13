@@ -24,6 +24,7 @@ struct SearchGifResponse: Decodable {
     let title: String
     let images: ImageResponse
     let user: UserResponse?
+    let source: String?
     
     enum CodingKeys: String, CodingKey {
         case type
@@ -32,6 +33,7 @@ struct SearchGifResponse: Decodable {
         case title
         case images
         case user
+        case source
     }
 }
 
@@ -77,6 +79,7 @@ struct OriginalImageResponse: Decodable {
     let width: String
     let height: String
     let size: String
+    let url: String
     let frames: String
     let mp4: String
     let mp4Size: String
@@ -85,6 +88,7 @@ struct OriginalImageResponse: Decodable {
         case width
         case height
         case size
+        case url
         case frames
         case mp4
         case mp4Size = "mp4_size"

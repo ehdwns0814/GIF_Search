@@ -30,7 +30,9 @@ extension SearchGifResponse {
             identifier: identifier,
             user: user?.castToUser(),
             imageCollection: images.castToImageCollection(),
-            title: title
+            title: title,
+            type: type,
+            source: self.source == "" ? nil : self.source
         )
     }
 }
@@ -47,6 +49,13 @@ extension UserResponse {
 
 extension ImageResponse {
     func castToImageCollection() -> ImageCollection {
-        return ImageCollection(imageURL: fixedWidth.url)
+        let originalWidth = Double(self.original.width) ?? 100
+        let originalHeight = Double(self.original.height) ?? 100
+        return ImageCollection(
+            imageURL: self.original.url,
+            originalWidth: originalWidth,
+            originalHeight: originalHeight,
+            mp4URL: self.fixedWidth.mp4
+        )
     }
 }
