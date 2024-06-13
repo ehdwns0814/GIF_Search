@@ -13,3 +13,5 @@ struct Gif {
     let imageCollection: ImageCollection
     let title: String
 }
+
+extension Gif: Hashable { }

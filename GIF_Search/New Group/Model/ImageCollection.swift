@@ -10,3 +10,5 @@ import Foundation
 struct ImageCollection {
     let imageURL: String
 }
+
+extension ImageCollection: Hashable { }

@@ -13,3 +13,5 @@ struct User {
     let description: String
     let avatarURL: String
 }
+
+extension User: Hashable { }
